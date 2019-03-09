@@ -5,7 +5,7 @@ n = imread(fullfile(diretorio, nome));
 
 %tranformar valores proximos de 0(perto do preto) em valores proximos 
 %de 255 (preto do branco) e vice-versa.
-%uma forma de fazer isso È subtrair 255 da img e dps multiplicar por -1
+%uma forma de fazer isso √© subtrair 255 da img e dps multiplicar por -1
 y = uint8(-1*(double(n)-255));
 subplot(331); imshow(n); title('Imagem de entrada');
 subplot(332); imshow(y); title('Negativo');
@@ -24,13 +24,13 @@ subplot(334); imshow(t); title('Brilho reduzido');
 %para isso, definimos um limiar
 limiar = 200;
 
-%o resultado da divis„o:
+%o resultado da divis√£o:
 %numero entre 0 e 1 = p valores de x menores que 180
 %numeros maiores que 1, p valores maiores que 180
 img = double(n)/limiar;
 b = img.^3;
 
-%esta operaÁ„o faz com que os valores maiores que 1 fiquem ainda maiores
+%esta opera√ß√£o faz com que os valores maiores que 1 fiquem ainda maiores
 %e os valores menores que 1 ainda menores. Assim, concluimos multiplicando
 %os valores pelo limiar e convertendo os dados p uint8.
 c = uint8(b*limiar);
@@ -38,21 +38,15 @@ subplot(224); imshow(c); title('Aumento do contraste');
 
 
 
-
-
-
-
-
-
 limiar = 200;
 
-%o resultado da divis„o:
+%o resultado da divis√£o:
 %numero entre 0 e 1 = p valores de x menores que 180
 %numeros maiores que 1, p valores maiores que 180
 img = double(n)/limiar;
 b = img.^3;
 
-%esta operaÁ„o faz com que os valores maiores que 1 fiquem ainda maiores
+%esta opera√ß√£o faz com que os valores maiores que 1 fiquem ainda maiores
 %e os valores menores que 1 ainda menores. Assim, concluimos multiplicando
 %os valores pelo limiar e convertendo os dados p uint8.
 c = uint8(b*limiar);
